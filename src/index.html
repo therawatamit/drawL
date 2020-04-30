@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="game.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="login">
+			<div class="menu">
+				<div class="header">
+					<div id="logo-container">
+						<a href="/"><div id="logo">Logo</div></a>
+					</div>
+				</div>
+				<div class="menu-container">
+					<div id="status"></div>
+					<div class="menu-name">
+						<label for="nick">Type your name</label
+						><input
+							id="nick"
+							class="form-control"
+							autocomplete="off"
+							spellcheck="false"
+							placeholder="Type your name"
+							maxlength="20"
+						/>
+					</div>
+					<div class="accent-color">
+						<p>Choose your accent color</p>
+						<div class="accents-row">
+							<div class="accent" style="background: #fff"></div>
+							<div class="accent" style="background: #d3d1d2"></div>
+							<div class="accent" style="background: #f70f0f"></div>
+							<div class="accent" style="background: #ff7200"></div>
+							<div class="accent" style="background: #fce700"></div>
+							<div class="accent" style="background: #02cb00"></div>
+							<div class="accent" style="background: #01fe94"></div>
+							<div class="accent" style="background: #05b0ff"></div>
+							<div class="accent" style="background: #221ecd"></div>
+							<div class="accent" style="background: #a300bd"></div>
+							<div class="accent" style="background: #cc7fad"></div>
+							<div class="accent" style="background: #fdad88"></div>
+							<div class="accent" style="background: #9e5425"></div>
+						</div>
+						<div class="accents-row">
+							<div class="accent" style="background: #514f54"></div>
+							<div class="accent" style="background: #a9a7a8"></div>
+							<div class="accent" style="background: #ae0b00"></div>
+							<div class="accent" style="background: #c84706"></div>
+							<div class="accent" style="background: #ec9e06"></div>
+							<div class="accent" style="background: #007612"></div>
+							<div class="accent" style="background: #049d6f"></div>
+							<div class="accent" style="background: #00579d"></div>
+							<div class="accent" style="background: #0f0b96"></div>
+							<div class="accent" style="background: #6e0083"></div>
+							<div class="accent" style="background: #a65673"></div>
+							<div class="accent" style="background: #e38a5e"></div>
+							<div class="accent" style="background: #5e320d"></div>
+						</div>
+						<!-- <div class="accents-row">
+							<div class="accent black" style="background: #000"></div>
+							<div class="accent" style="background: #827c80"></div>
+							<div class="accent" style="background: #57060c"></div>
+							<div class="accent" style="background: #8b2500"></div>
+							<div class="accent" style="background: #9e6600"></div>
+							<div class="accent" style="background: #003f00"></div>
+							<div class="accent" style="background: #00766a"></div>
+							<div class="accent" style="background: #003b75"></div>
+							<div class="accent" style="background: #0e0151"></div>
+							<div class="accent" style="background: #3c0350"></div>
+							<div class="accent" style="background: #73314d"></div>
+							<div class="accent" style="background: #d1754e"></div>
+							<div class="accent" style="background: #421e06"></div>
+						</div> -->
+					</div>
+					<button
+						id="play"
+						type="button"
+						class="btn"
+						style="display: inline-block"
+					>
+						<span>Play!</span>
+					</button>
+					<button
+						id="create-new"
+						type="button"
+						class="btn"
+						style="display: inline-block"
+					>
+						<span>Create New!</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="game" style="display: none">
+			<div class="game-area">
+				<div class="header">
+					<div id="logo-container">
+						<a href="/"><div id="logo">Logo</div></a>
+					</div>
+				</div>
+				<div class="board-n-hud">
+					<div id="game-details">
+						<h5 id="clock"></h5>
+						<h5 id="round" style="font-size: 15px; padding: 19px 0 0 1px"></h5>
+					</div>
+					<ul id="player-list" style="min-height: 0px"></ul>
+					<div id="board">
+						<div class="current-word">
+							<div id="game-container-sticky">
+								<div id="game-canvas-sticky">
+									<div id="game-content">
+										<p id="game-sticky"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="game-canvas">
+							<div style="display: none"></div>
+							<canvas
+								id="canvas"
+								width="800"
+								height="600"
+								oncontextmenu="return false"
+							></canvas>
+						</div>
+					</div>
+					<div class="chat-n-tools">
+						<div id="tools">
+							<div id="game-slider">
+								<input
+									type="range"
+									min="4"
+									max="36"
+									value="18"
+									step="0.5"
+									id="color-preview"
+								/>
+								<div class="tooltip">
+									<div class="tooltip-inner">
+										<div class="tooltip-preview">
+											<div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="colors-choose">
+								<div class="colors-row">
+									<div class="color" style="background: #fff"></div>
+									<div class="color" style="background: #d3d1d2"></div>
+									<div class="color" style="background: #f70f0f"></div>
+									<div class="color" style="background: #ff7200"></div>
+									<div class="color" style="background: #fce700"></div>
+									<div class="color" style="background: #02cb00"></div>
+									<div class="color" style="background: #01fe94"></div>
+									<div class="color" style="background: #05b0ff"></div>
+									<div class="color" style="background: #221ecd"></div>
+									<div class="color" style="background: #a300bd"></div>
+									<div class="color" style="background: #cc7fad"></div>
+									<div class="color" style="background: #fdad88"></div>
+									<div class="color" style="background: #9e5425"></div>
+								</div>
+								<div class="colors-row">
+									<div class="color" style="background: #514f54"></div>
+									<div class="color" style="background: #a9a7a8"></div>
+									<div class="color" style="background: #ae0b00"></div>
+									<div class="color" style="background: #c84706"></div>
+									<div class="color" style="background: #ec9e06"></div>
+									<div class="color" style="background: #007612"></div>
+									<div class="color" style="background: #049d6f"></div>
+									<div class="color" style="background: #00579d"></div>
+									<div class="color" style="background: #0f0b96"></div>
+									<div class="color" style="background: #6e0083"></div>
+									<div class="color" style="background: #a65673"></div>
+									<div class="color" style="background: #e38a5e"></div>
+									<div class="color" style="background: #5e320d"></div>
+								</div>
+								<div class="colors-row">
+									<div class="color black" style="background: #000"></div>
+									<div class="color" style="background: #827c80"></div>
+									<div class="color" style="background: #57060c"></div>
+									<div class="color" style="background: #8b2500"></div>
+									<div class="color" style="background: #9e6600"></div>
+									<div class="color" style="background: #003f00"></div>
+									<div class="color" style="background: #00766a"></div>
+									<div class="color" style="background: #003b75"></div>
+									<div class="color" style="background: #0e0151"></div>
+									<div class="color" style="background: #3c0350"></div>
+									<div class="color" style="background: #73314d"></div>
+									<div class="color" style="background: #d1754e"></div>
+									<div class="color" style="background: #421e06"></div>
+								</div>
+							</div>
+							<div id="clear"></div>
+						</div>
+						<div id="chat">
+							<div class="chat-body">
+								<ul id="chat-list"></ul>
+								<input
+									id="chat-input"
+									maxlength="100"
+									autocomplete="off"
+									placeholder="Type your guess/chat here"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+		<script src="connect.js"></script>
+		<script src="User.js"></script>
+		<script src="Tool.js"></script>
+		<script src="game.js"></script>
+		<script src="index.js"></script>
+		<script src="rooms.js"></script>
+	</body>
+</html>

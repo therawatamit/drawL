@@ -1,0 +1,159 @@
+html,
+body {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	color: #fff;
+	font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+	background-image: url(img/background.8519a420.png);
+	background-color: #eab60b;
+	background-repeat: repeat;
+	background-size: 524px;
+	overflow: hidden;
+}
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+.login {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	padding: 0;
+	z-index: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	justify-content: center;
+}
+
+.menu {
+	position: relative;
+	min-width: 835px;
+	max-width: 970px;
+	height: 800px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	position: relative;
+	z-index: 2;
+	margin: 10px auto;
+	flex: 0 0 20px;
+}
+
+.logo-container {
+	text-align: center;
+	width: 100%;
+	margin-top: 0;
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 835px;
+	height: 470px;
+	flex: 0 0 470px;
+	background-color: #2c2f33;
+	padding: 50px;
+	border-radius: 25px;
+}
+
+.menu-container label {
+	pointer-events: none;
+	opacity: 0;
+	position: absolute;
+}
+
+#nick {
+	background-color: #a7a4a4;
+	color: #eee;
+	text-shadow: #2c2f33 1px 1px 0px, #2c2f33 -1px -1px 2px;
+	position: relative;
+	border: 2px solid #666;
+	border-radius: 20px;
+	height: 50px;
+	width: 295px;
+	font-size: 25px;
+	font-family: Roboto, sans-serif;
+	padding-top: 0px;
+	text-align: center;
+	box-shadow: none;
+	transition: none;
+}
+
+#nick:focus {
+	outline: none;
+	box-shadow: 0px 0px 2px 2px #a55a05;
+}
+
+.accent-color {
+	text-align: center;
+}
+.accents-row,
+.colors-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.accent,
+.color {
+	width: 18px;
+	height: 18px;
+	border: solid 2px rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	margin: 0.5px;
+}
+
+.accent:hover,
+.color:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.accent:active,
+.color:active {
+	cursor: pointer;
+	transform: scale(0.9);
+}
+
+.btn {
+	width: 145px;
+	height: 50px;
+	border: 2px solid #866404;
+	background: #b88312;
+	font-family: Komika sans-serif;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 20px;
+	outline: 0;
+	margin-top: 50px;
+	margin-bottom: 0;
+	margin-right: 1px;
+	box-shadow: none;
+	transition: none;
+}
+
+.btn:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.btn:active {
+	transform: scale(0.9);
+	padding: 0 0 4px;
+	background: #a55a05;
+}
